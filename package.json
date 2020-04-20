@@ -1,0 +1,9 @@
+{
+  "name": "vuepress-plugin-metrika",
+  "version": "0.0.1",
+  "description": "Yandex Metrika plugin for VuePress",
+  "main": "index.js",
+  "repository": "https://github.com/teners/vuepress-plugin-metrika",
+  "author": "Sergey Sokolov <hi@teners.me>",
+  "license": "MIT"
+}
