@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-metrika",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Yandex Metrika plugin for VuePress",
   "keywords": [
     "vuepress",
