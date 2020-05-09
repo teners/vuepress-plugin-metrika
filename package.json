@@ -1,9 +1,46 @@
 {
   "name": "vuepress-plugin-metrika",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Yandex Metrika plugin for VuePress",
-  "main": "index.js",
-  "repository": "https://github.com/teners/vuepress-plugin-metrika",
+  "keywords": [
+    "vuepress",
+    "plugin",
+    "yandex",
+    "metrika"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "lint": "eslint --ext .ts src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teners/vuepress-plugin-metrika"
+  },
+  "bugs": {
+    "url": "https://github.com/teners/vuepress-plugin-metrika"
+  },
   "author": "Sergey Sokolov <hi@teners.me>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "@vuepress/shared-utils": "^1.4.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "typescript": "^3.8.3",
+    "vue-router": "^3.1.6",
+    "vuepress-types": "^0.9.1"
+  },
+  "dependencies": {
+    "vue-yandex-metrika": "^1.8.3"
+  }
 }
