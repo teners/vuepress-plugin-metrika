@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-metrika",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Yandex Metrika plugin for VuePress",
   "keywords": [
     "vuepress",
@@ -18,7 +18,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "lint": "eslint --ext .ts src"
+    "lint": "eslint --cache src",
+    "pretty": "prettier --write src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -38,11 +39,29 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "prettier": "2.0.5",
     "typescript": "^3.8.3",
     "vue-router": "^3.1.6",
     "vuepress-types": "^0.9.1"
   },
   "dependencies": {
     "vue-yandex-metrika": "^1.8.3"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "printWidth": 100,
+    "singleQuote": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }

@@ -11,7 +11,7 @@ Integrate [Yandex.Metrika](https://metrika.yandex.ru/) into your
 From your VuePress project directory run
 
 ```shell
-yarn add -D vuepress-plugin-metrika
+yarn add --dev --exact vuepress-plugin-metrika
 ```
 
 ## Usage
@@ -42,7 +42,7 @@ with the following defaults:
   clickmap: true,
   trackLinks: true,
   webvisor: false
-}     
+}
 ```
 
 [See more](https://yandex.ru/support/metrica/code/counter-initialize.html)
