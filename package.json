@@ -6,7 +6,9 @@
     "vuepress",
     "plugin",
     "yandex",
-    "metrika"
+    "metrika",
+    "яндекс",
+    "метрика"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
