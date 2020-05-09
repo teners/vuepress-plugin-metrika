@@ -4,7 +4,7 @@
 ![License](https://img.shields.io/npm/l/vuepress-plugin-metrika)
 
 Integrate [Yandex.Metrika](https://metrika.yandex.ru/) into your
-[VuePress](http://vuepress.vuejs.org) app with a few configuration lines.
+[VuePress](http://vuepress.vuejs.org) app with a few configuration lines 🔧
 
 ## Install
 
@@ -47,3 +47,6 @@ with the following defaults:
 
 [See more](https://yandex.ru/support/metrica/code/counter-initialize.html)
 about Yandex.Metrika configuration options.
+
+And you're good to go! 🚀 Build your VuePress site as usual
+and enjoy your analytics 📈
