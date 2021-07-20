@@ -12,8 +12,17 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: npm ci
-      - run: npm test
+      - name: Build
+        run: |
+          yarn set version berry
+          yarn install --immutable
+          yarn run build
+          tar czf build.tgz node_modules lib
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifacts
+          path: build.tgz
 
   publish-npm:
     needs: build
@@ -24,10 +33,19 @@ jobs:
         with:
           node-version: 14
           registry-url: https://registry.npmjs.org/
-      - run: yarn
-      - run: npm publish
+      - name: Get build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifacts
+      - name: Extract build artifacts
+        run: tar xzf build.tgz
+      - name: Use yarn berry
+        run: yarn set version berry
+      - name: Publish
+        run: yarn npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          YARN_NPM_PUBLISH_REGISTRY: https://registry.npmjs.org/
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   publish-gpr:
     needs: build
@@ -41,7 +59,16 @@ jobs:
         with:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
+      - name: Get build artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifacts
+      - name: Extract build artifacts
+        run: tar xzf build.tgz
+      - name: Use yarn berry
+        run: yarn set version berry
+      - name: Publish
+        run: yarn npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YARN_NPM_PUBLISH_REGISTRY: https://npm.pkg.github.com/
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

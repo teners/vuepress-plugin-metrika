@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-metrika",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Yandex Metrika plugin for VuePress",
   "keywords": [
     "vuepress",
@@ -34,7 +34,7 @@
     "@types/node": "^13.13.4",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
-    "@vuepress/shared-utils": "^1.4.1",
+    "@vuepress/shared-utils": "^1.8.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
@@ -44,7 +44,7 @@
     "prettier": "2.0.5",
     "typescript": "^3.8.3",
     "vue-router": "^3.1.6",
-    "vuepress-types": "^0.9.1"
+    "vuepress-types": "^0.9.4"
   },
   "dependencies": {
     "vue-yandex-metrika": "^1.8.3"
