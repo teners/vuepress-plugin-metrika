@@ -86,5 +86,6 @@
       "no-continue": "off",
       "no-restricted-syntax": "off"
     }
-  }
+  },
+  "packageManager": "yarn@3.3.1"
 }
